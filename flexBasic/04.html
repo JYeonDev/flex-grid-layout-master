@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Flex</title>
+  <link rel="stylesheet" href="./default.css">
+  <style>
+    .flex-container {
+      display: flex;
+    }
+    .flex-item {
+      /* flex-basis 아이템의 기본 크기를 설정한다.(flex-direction이 row일 때는 너비, column일 때는 높이) 
+       width와의 차이점은 width는 content가 width범위를 넘어서면 줄바꿈이 되거나 숨김처리되지만 
+       flex-basis는 content가 flex-basis 영역을 넘어서면 content의 범위 만큼 늘어난다. */
+    	flex-basis: auto; /* default */
+    	/* flex-basis: 0; */
+    	/* flex-basis: 50%; */
+    	/* flex-basis: 300px; */
+    	/* flex-basis: 10rem; */
+    	/* flex-basis: content; */
+
+      /* flex-grow flex-basis 의 값보다 커질 수 있는지 결정하는 속성
+         flex-basis 값을 제외한 여백의 비율을 정한다.*/
+	    /* flex-grow: 1; */
+	    /* flex-grow: 0; */ /* default */
+
+      /* flex-shrink flex-basis 의 값보다 작아질 수 있는지 결정하는 속성*/
+      flex-shrink: 1; /* default */
+    }
+
+    
+  </style>
+</head>
+<body>
+  <div class="flex-container">
+    <div class="flex-item">AAAAAAAAAAAAAAAAAAAAAAAA</div>
+    <div class="flex-item">BBBBBBBBBBBB</div>
+    <div class="flex-item">CCCCCCCCCCCCCCCCCCCCCCCC</div>
+  </div>
+</body>
+</html>
