@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Flex</title>
+  <link rel="stylesheet" href="./default.css">
+  <style>
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .flex-item {
+      flex: 1 1 auto;
+    }
+    .flex-item:nth-child(1) {
+      /* flex flex-grow, flex-shrink, flex-basis 를 한번에 사용하는 축약형
+         순서는 flex-grow; flex-shrink; flex-basis 이다.*/
+      /* flex: 1; */
+      /* flex: 1 1 0;   위와 같다.*/  /* flex-basis는 기본값이 아닌 0이된다. 주의! */
+
+      /* width: 20%; */ /* 정확한 비율을 나눌때는 width값이 더 정확하다 */
+      /* flex: 0 1 20%; */  /* flex-basis의 같은 비율을 줬지만 content크기에 따라 다른 결과가 나오는 걸 볼수 있다. */
+
+      /* 예제 */
+      width: 20%;
+    }
+    .flex-item:nth-child(2) {
+      /* flex: 3; */
+      /* flex: 3 1 0;   위와 같다.*/
+
+      /* width: 60%; */
+      /* flex: 0 1 20%; */
+
+      /* 예제 */
+      width: 60%;
+    }
+    .flex-item:nth-child(3) {
+      /* flex: 1; */
+      /* flex: 1 1 0;   위와 같다.*/
+
+      /* width: 20%; */
+      /* flex: 0 1 20%; */
+
+      /* 예제 */
+      width: 20%;
+    }
+
+    .flex-item p {
+      /* white-space: nowrap; */
+    }
+  </style>
+</head>
+<body>
+  <div class="flex-container">
+    <div class="flex-item">
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        Aliquam delectus nemo impedit quisquam voluptatem! Dolore deleniti fugiat deserunt voluptate atque.
+      </p>
+    </div>
+    <div class="flex-item">BB</div>
+    <div class="flex-item">CCCCCCC</div>
+    <div class="flex-item">DDDDDDDDDDDDD</div>
+  </div>
+</body>
+</html>
