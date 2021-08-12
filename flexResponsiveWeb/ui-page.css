@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 1rem;
+}
+
+/* justify-content: space-between; 둘다 같은 결과 출력 */
+/* .search-form {
+  margin-left: auto;
+} */
+
+.search-form {
+  width: 240px;
+  max-width: 60%;
+}
+
+.primary {
+  padding: 1rem;
+}
+
+.secondary {
+  padding: 1rem;
+}
+
+.secondary-a {
+  background: white;
+}
+
+.friend-list {
+  margin-top: 2rem;
+}
+
+.secondary-b {
+  color: white;
+  background: #666;
+}
+
+.footer {
+  padding: 1rem;
+  text-align: center;
+}
