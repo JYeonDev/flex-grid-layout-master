@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid</title>
+  <link rel="stylesheet" href="./default.css">
+  <style>
+    .grid-container {
+      height: 80vh;   /* grid는 container 높이가 지정되어 있으면 자동으로 높이에 맞춰서 1:1비율로 채워진다. */
+      display: grid;
+      /* grid-template-columns, grid-template-columns 열과 행의 크기를 정한다.*/
+      /* fr(fraction) 비,비율,분수,부분 */
+      /* grid-template-columns: 1fr 500px 1fr; */ /* 양끝은 1:1 비율을 유지하고 가운데는 500px 을 유지 */
+      grid-template-columns: repeat(3, 1fr);  /* grid-template-columns: 1fr 1fr 1fr; 과 같은 형태 */
+      /* grid-template-columns: repeat(3, 1fr 2fr 1fr) */;  /* 1fr 2fr 1fr 이 3번 반복 */
+
+      /* grid-template-rows: 200px 200px; */  /* gird 높이값 지정 지정이 안된부분은 auto값으로 지정된다. */
+      /* grid-template-rows: repeat(2, 1fr); */
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="grid-item">A</div>
+    <div class="grid-item">B</div>
+    <div class="grid-item">C</div>
+    <div class="grid-item">D</div>
+    <div class="grid-item">E</div>
+    <div class="grid-item">F</div>
+    <div class="grid-item">G</div>
+    <div class="grid-item">H</div>
+    <div class="grid-item">I</div>
+  </div>
+</body>
+</html>

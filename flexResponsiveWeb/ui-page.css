@@ -127,5 +127,6 @@ label[for="modal-switch"] span {
   .menu-item:hover {
     background-color: crimson;
     width: 100%;
+    transform: scale(1.2);
   }
 }
