@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid</title>
+  <link rel="stylesheet" href="./default.css">
+  <style>
+    .grid-container {
+      display: grid;
+      /* grid-template-columns: repeat(3, 1fr); */
+      /* grid-template-rows: repeat(3, minmax(100px, auto)); */    /* minmax(최솟값, 최댓값) minmax(100px, auto) 100px 보다 작아질수없고 더커지면 자동으로 늘어난다.*/
+
+
+      /* auto-fill, auto-fit 자동으로 채우기 */
+      /* grid-template-columns: repeat(auto-fill, minmax(200px, auto)); */  /* 크기에 맞게 자동으로 개수를 채워준다. */
+      grid-template-columns: repeat(auto-fit, minmax(200px, auto)); /* auto-fill과 다르게 남는 공간을 자동으로 채운다. */
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="grid-item">A</div>
+    <div class="grid-item">B</div>
+    <div class="grid-item">C</div>
+    <div class="grid-item">D</div>
+    <div class="grid-item">E</div>
+    <div class="grid-item">F</div>
+    <div class="grid-item">G</div>
+    <div class="grid-item">H</div>
+    <div class="grid-item">I</div>
+  </div>
+</body>
+</html>
