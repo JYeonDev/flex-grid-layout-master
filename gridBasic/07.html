@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid</title>
+  <link rel="stylesheet" href="./default.css">
+  <style>
+    .grid-container {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 1fr 3fr 1fr;
+
+      /* grid-template-areas 각 영역의 이름을 지정하고 배치하는게 가능하다. */
+      grid-template-areas: 
+        ". header header"   /* .은 빈칸을 의미한다. none도 사용가능 */
+        "sidebar-a main sidebar-b"
+        "footer footer footer"
+    }
+
+
+    /* grid-area 영역별 이름을 지정한다. */
+    .header {grid-area: header;}
+    .sidebar-a {grid-area: sidebar-a;}
+    .sidebar-b {grid-area: sidebar-b;}
+    .main {grid-area: main;}
+    .footer {grid-area: footer;}
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="header grid-item">Header</div>
+    <div class="sidebar-a grid-item">Sidebar A</div>
+    <div class="sidebar-b grid-item">Sidebar B</div>
+    <div class="main grid-item">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat velit molestiae quod iste, nesciunt eaque perspiciatis recusandae eveniet, dolore itaque voluptas. Enim harum repudiandae maxime, commodi similique iusto deserunt corporis iste laborum. Cum non nam aliquid reiciendis natus qui praesentium. Tenetur vitae quasi ad quos ullam voluptas sapiente provident? Enim doloremque minima magnam laudantium ipsa dicta vitae animi reprehenderit laboriosam cum error sint, iure maxime labore! Laboriosam, blanditiis tempore, aliquam aliquid quas maiores laborum asperiores reiciendis cum rerum ratione similique sed dolorem assumenda aspernatur nostrum est, deserunt ipsum accusamus! Nihil assumenda rerum obcaecati odio dignissimos deserunt? Natus perspiciatis libero perferendis, architecto, error quod velit optio deleniti veniam qui exercitationem consequuntur nisi maiores quasi nulla eos laborum obcaecati consectetur beatae. Omnis sunt ex illum doloribus et eveniet sed error quam doloremque aliquid eius, sint tempore odit dolor assumenda. Illo expedita ex maiores repellat, quibusdam quaerat voluptas reprehenderit molestiae modi tempora nobis consequuntur dolores nesciunt placeat veniam. Nisi unde nam nulla quo repudiandae hic natus labore, aliquid atque ratione numquam, fugit dolores autem error! Sapiente fugit eum aliquam nobis asperiores? Dolorem, ab? Perspiciatis dolores quos amet vero! Expedita voluptate ut eos sit, aut aspernatur distinctio dolorum omnis! At dicta ducimus fugit sed.
+    </div>
+    <div class="footer grid-item">Footer</div>
+  </div>
+</body>
+</html>
