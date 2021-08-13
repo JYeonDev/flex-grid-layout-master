@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid</title>
+  <link rel="stylesheet" href="./default.css">
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: minmax(100px, auto);
+      gap: 1rem;
+    }
+    .grid-item:nth-child(1) {
+      /* 
+      grid-column-start
+      grid-column-end
+      grid-column
+      grid-row-start
+      grid-row-end
+      grid-row
+      grid의 각 셀 영역을 지정한다.
+      */
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 4;
+    }
+
+    .grid-item:nth-child(3) {
+      grid-column: 3;   /* 억지로 자리를 지키려다 보니 D 뒤에 가려져서 안보이게 처리됨 */
+      grid-row: 2;
+    }
+
+    .grid-item:nth-child(4) {
+      grid-column: 3; /* 기본이 1칸이기 때문에 한칸만 차지할때는 생략해도된다. 3 / 4 와 같다. */
+      /* grid-row:  3 / 5; */
+      grid-row: 2 / span 3; /* 3번째 라인에서부터 2칸 이동 위와 같다. */
+      opacity: 0.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="grid-item">A</div>
+    <div class="grid-item">B</div>
+    <div class="grid-item">C</div>
+    <div class="grid-item">D</div>
+    <div class="grid-item">E</div>
+    <div class="grid-item">F</div>
+    <div class="grid-item">G</div>
+    <div class="grid-item">H</div>
+    <div class="grid-item">I</div>
+  </div>
+</body>
+</html>
