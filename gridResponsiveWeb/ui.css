@@ -117,10 +117,15 @@
 
 
 /* card-list */
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+  gap: 2%;
+}
+
 .card-item {
-  display: flex;
-  flex-direction: column;
   margin-bottom: 2rem;
+  background: white;
 }
 
 .card-image {
@@ -140,26 +145,4 @@
   flex: auto;
   padding-bottom: 1em;
   background: white;
-}
-
-@media (min-width: 600px) {
-  .card-list-con {
-    overflow-x: hidden;
-  }
-  .card-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -1rem;
-    /* justify-content: space-between; */
-  }
-  .card-item {
-    width: 50%;
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .card-item {
-    width: 33.3333%;
-  }
 }
